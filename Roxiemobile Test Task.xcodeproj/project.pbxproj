@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		9ECF70C0286B73A400B59DA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF70BF286B73A400B59DA3 /* AppDelegate.swift */; };
 		9ECF70C2286B73A400B59DA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF70C1286B73A400B59DA3 /* SceneDelegate.swift */; };
-		9ECF70C4286B73A400B59DA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF70C3286B73A400B59DA3 /* ViewController.swift */; };
-		9ECF70C7286B73A400B59DA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ECF70C5286B73A400B59DA3 /* Main.storyboard */; };
 		9ECF70C9286B73A800B59DA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9ECF70C8286B73A800B59DA3 /* Assets.xcassets */; };
 		9ECF70CC286B73A800B59DA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ECF70CA286B73A800B59DA3 /* LaunchScreen.storyboard */; };
+		9ECF70DB286B77A200B59DA3 /* ActiveOrdersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF70DA286B77A200B59DA3 /* ActiveOrdersListView.swift */; };
+		9ECF70DD286B77C100B59DA3 /* ActiveOrdersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF70DC286B77C100B59DA3 /* ActiveOrdersListViewController.swift */; };
+		9ECF70E0286B77D800B59DA3 /* ActiveOrdersListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF70DF286B77D800B59DA3 /* ActiveOrdersListPresenter.swift */; };
+		9ECF70E2286B77F800B59DA3 /* ActiveOrdersListModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF70E1286B77F800B59DA3 /* ActiveOrdersListModuleBuilder.swift */; };
+		9ECF70E5286B791F00B59DA3 /* ActiveOrdersListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF70E4286B791F00B59DA3 /* ActiveOrdersListViewProtocol.swift */; };
+		9ECF70E7286B793100B59DA3 /* ActiveOrdersListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF70E6286B793100B59DA3 /* ActiveOrdersListPresenterProtocol.swift */; };
+		9ECF70EA286B795B00B59DA3 /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF70E9286B795B00B59DA3 /* Assembler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9ECF70BC286B73A400B59DA3 /* Roxiemobile Test Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Roxiemobile Test Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ECF70BF286B73A400B59DA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9ECF70C1286B73A400B59DA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9ECF70C3286B73A400B59DA3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9ECF70C6286B73A400B59DA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9ECF70C8286B73A800B59DA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9ECF70CB286B73A800B59DA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9ECF70CD286B73A800B59DA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9ECF70DA286B77A200B59DA3 /* ActiveOrdersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveOrdersListView.swift; sourceTree = "<group>"; };
+		9ECF70DC286B77C100B59DA3 /* ActiveOrdersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveOrdersListViewController.swift; sourceTree = "<group>"; };
+		9ECF70DF286B77D800B59DA3 /* ActiveOrdersListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveOrdersListPresenter.swift; sourceTree = "<group>"; };
+		9ECF70E1286B77F800B59DA3 /* ActiveOrdersListModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveOrdersListModuleBuilder.swift; sourceTree = "<group>"; };
+		9ECF70E4286B791F00B59DA3 /* ActiveOrdersListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveOrdersListViewProtocol.swift; sourceTree = "<group>"; };
+		9ECF70E6286B793100B59DA3 /* ActiveOrdersListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveOrdersListPresenterProtocol.swift; sourceTree = "<group>"; };
+		9ECF70E9286B795B00B59DA3 /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,92 @@
 		9ECF70BE286B73A400B59DA3 /* Roxiemobile Test Task */ = {
 			isa = PBXGroup;
 			children = (
+				9ECF70E8286B794D00B59DA3 /* Assembler */,
+				9ECF70E3286B790100B59DA3 /* Protocols */,
+				9ECF70D5286B76AA00B59DA3 /* Modules */,
+				9ECF70D3286B73C400B59DA3 /* App */,
+				9ECF70D4286B740900B59DA3 /* Resources */,
+			);
+			path = "Roxiemobile Test Task";
+			sourceTree = "<group>";
+		};
+		9ECF70D3286B73C400B59DA3 /* App */ = {
+			isa = PBXGroup;
+			children = (
 				9ECF70BF286B73A400B59DA3 /* AppDelegate.swift */,
 				9ECF70C1286B73A400B59DA3 /* SceneDelegate.swift */,
-				9ECF70C3286B73A400B59DA3 /* ViewController.swift */,
-				9ECF70C5286B73A400B59DA3 /* Main.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		9ECF70D4286B740900B59DA3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				9ECF70C8286B73A800B59DA3 /* Assets.xcassets */,
 				9ECF70CA286B73A800B59DA3 /* LaunchScreen.storyboard */,
 				9ECF70CD286B73A800B59DA3 /* Info.plist */,
 			);
-			path = "Roxiemobile Test Task";
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9ECF70D5286B76AA00B59DA3 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				9ECF70D6286B76B200B59DA3 /* ActiveOrdersList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		9ECF70D6286B76B200B59DA3 /* ActiveOrdersList */ = {
+			isa = PBXGroup;
+			children = (
+				9ECF70D9286B771900B59DA3 /* ModuleBuilder */,
+				9ECF70D8286B771300B59DA3 /* Views */,
+				9ECF70D7286B770A00B59DA3 /* Presenter */,
+			);
+			path = ActiveOrdersList;
+			sourceTree = "<group>";
+		};
+		9ECF70D7286B770A00B59DA3 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9ECF70DF286B77D800B59DA3 /* ActiveOrdersListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9ECF70D8286B771300B59DA3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9ECF70DC286B77C100B59DA3 /* ActiveOrdersListViewController.swift */,
+				9ECF70DA286B77A200B59DA3 /* ActiveOrdersListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9ECF70D9286B771900B59DA3 /* ModuleBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				9ECF70E1286B77F800B59DA3 /* ActiveOrdersListModuleBuilder.swift */,
+			);
+			path = ModuleBuilder;
+			sourceTree = "<group>";
+		};
+		9ECF70E3286B790100B59DA3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9ECF70E4286B791F00B59DA3 /* ActiveOrdersListViewProtocol.swift */,
+				9ECF70E6286B793100B59DA3 /* ActiveOrdersListPresenterProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9ECF70E8286B794D00B59DA3 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				9ECF70E9286B795B00B59DA3 /* Assembler.swift */,
+			);
+			path = Assembler;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +214,6 @@
 			files = (
 				9ECF70CC286B73A800B59DA3 /* LaunchScreen.storyboard in Resources */,
 				9ECF70C9286B73A800B59DA3 /* Assets.xcassets in Resources */,
-				9ECF70C7286B73A400B59DA3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +224,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9ECF70C4286B73A400B59DA3 /* ViewController.swift in Sources */,
+				9ECF70E2286B77F800B59DA3 /* ActiveOrdersListModuleBuilder.swift in Sources */,
 				9ECF70C0286B73A400B59DA3 /* AppDelegate.swift in Sources */,
+				9ECF70E0286B77D800B59DA3 /* ActiveOrdersListPresenter.swift in Sources */,
+				9ECF70E7286B793100B59DA3 /* ActiveOrdersListPresenterProtocol.swift in Sources */,
+				9ECF70EA286B795B00B59DA3 /* Assembler.swift in Sources */,
+				9ECF70DD286B77C100B59DA3 /* ActiveOrdersListViewController.swift in Sources */,
+				9ECF70DB286B77A200B59DA3 /* ActiveOrdersListView.swift in Sources */,
+				9ECF70E5286B791F00B59DA3 /* ActiveOrdersListViewProtocol.swift in Sources */,
 				9ECF70C2286B73A400B59DA3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +239,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9ECF70C5286B73A400B59DA3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9ECF70C6286B73A400B59DA3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9ECF70CA286B73A800B59DA3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -291,10 +375,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5RUACV32J4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Roxiemobile Test Task/Info.plist";
+				INFOPLIST_FILE = "Roxiemobile Test Task/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -319,10 +402,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5RUACV32J4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Roxiemobile Test Task/Info.plist";
+				INFOPLIST_FILE = "Roxiemobile Test Task/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
