@@ -19,6 +19,7 @@ class ActiveOrdersListViewController: UIViewController {
     override func loadView() {
         super.loadView()
         let view = ActiveOrdersListView()
+        view.delegate = self
         self.view = view
     }
 
@@ -35,5 +36,11 @@ class ActiveOrdersListViewController: UIViewController {
 // MARK: - ActiveOrdersListViewProtocol
 
 extension ActiveOrdersListViewController: ActiveOrdersListViewProtocol {
+
+}
+
+// MARK: - ActiveOrdersListViewDelegate
+
+extension ActiveOrdersListViewController: ActiveOrdersListViewDelegate {
 
 }
