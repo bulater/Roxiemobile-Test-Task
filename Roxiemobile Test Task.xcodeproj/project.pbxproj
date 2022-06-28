@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E691124286B936800A4B6D2 /* ActiveOrdersListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E691123286B936800A4B6D2 /* ActiveOrdersListTableViewCell.swift */; };
 		9ECF70C0286B73A400B59DA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF70BF286B73A400B59DA3 /* AppDelegate.swift */; };
 		9ECF70C2286B73A400B59DA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF70C1286B73A400B59DA3 /* SceneDelegate.swift */; };
 		9ECF70C9286B73A800B59DA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9ECF70C8286B73A800B59DA3 /* Assets.xcassets */; };
@@ -18,9 +19,11 @@
 		9ECF70E5286B791F00B59DA3 /* ActiveOrdersListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF70E4286B791F00B59DA3 /* ActiveOrdersListViewProtocol.swift */; };
 		9ECF70E7286B793100B59DA3 /* ActiveOrdersListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF70E6286B793100B59DA3 /* ActiveOrdersListPresenterProtocol.swift */; };
 		9ECF70EA286B795B00B59DA3 /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF70E9286B795B00B59DA3 /* Assembler.swift */; };
+		9ECF70ED286B7D3000B59DA3 /* ActiveOrdersListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF70EC286B7D3000B59DA3 /* ActiveOrdersListTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E691123286B936800A4B6D2 /* ActiveOrdersListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveOrdersListTableViewCell.swift; sourceTree = "<group>"; };
 		9ECF70BC286B73A400B59DA3 /* Roxiemobile Test Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Roxiemobile Test Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ECF70BF286B73A400B59DA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9ECF70C1286B73A400B59DA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +37,7 @@
 		9ECF70E4286B791F00B59DA3 /* ActiveOrdersListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveOrdersListViewProtocol.swift; sourceTree = "<group>"; };
 		9ECF70E6286B793100B59DA3 /* ActiveOrdersListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveOrdersListPresenterProtocol.swift; sourceTree = "<group>"; };
 		9ECF70E9286B795B00B59DA3 /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
+		9ECF70EC286B7D3000B59DA3 /* ActiveOrdersListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveOrdersListTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,10 +70,10 @@
 		9ECF70BE286B73A400B59DA3 /* Roxiemobile Test Task */ = {
 			isa = PBXGroup;
 			children = (
+				9ECF70D3286B73C400B59DA3 /* App */,
 				9ECF70E8286B794D00B59DA3 /* Assembler */,
 				9ECF70E3286B790100B59DA3 /* Protocols */,
 				9ECF70D5286B76AA00B59DA3 /* Modules */,
-				9ECF70D3286B73C400B59DA3 /* App */,
 				9ECF70D4286B740900B59DA3 /* Resources */,
 			);
 			path = "Roxiemobile Test Task";
@@ -125,6 +129,7 @@
 			children = (
 				9ECF70DC286B77C100B59DA3 /* ActiveOrdersListViewController.swift */,
 				9ECF70DA286B77A200B59DA3 /* ActiveOrdersListView.swift */,
+				9ECF70EB286B7D1E00B59DA3 /* TableView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -152,6 +157,15 @@
 				9ECF70E9286B795B00B59DA3 /* Assembler.swift */,
 			);
 			path = Assembler;
+			sourceTree = "<group>";
+		};
+		9ECF70EB286B7D1E00B59DA3 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				9ECF70EC286B7D3000B59DA3 /* ActiveOrdersListTableView.swift */,
+				9E691123286B936800A4B6D2 /* ActiveOrdersListTableViewCell.swift */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,8 +240,10 @@
 			files = (
 				9ECF70E2286B77F800B59DA3 /* ActiveOrdersListModuleBuilder.swift in Sources */,
 				9ECF70C0286B73A400B59DA3 /* AppDelegate.swift in Sources */,
+				9E691124286B936800A4B6D2 /* ActiveOrdersListTableViewCell.swift in Sources */,
 				9ECF70E0286B77D800B59DA3 /* ActiveOrdersListPresenter.swift in Sources */,
 				9ECF70E7286B793100B59DA3 /* ActiveOrdersListPresenterProtocol.swift in Sources */,
+				9ECF70ED286B7D3000B59DA3 /* ActiveOrdersListTableView.swift in Sources */,
 				9ECF70EA286B795B00B59DA3 /* Assembler.swift in Sources */,
 				9ECF70DD286B77C100B59DA3 /* ActiveOrdersListViewController.swift in Sources */,
 				9ECF70DB286B77A200B59DA3 /* ActiveOrdersListView.swift in Sources */,
