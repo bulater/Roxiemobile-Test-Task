@@ -21,7 +21,7 @@ struct ActiveOrdersViewModel {
         self.startAdress = order.startAddress.address
         self.endCity = order.endAddress.city
         self.endAddress = order.endAddress.address
-        self.orderTime = order.orderTime.dateFormate()
+        self.orderTime = order.orderTime
         self.amount = order.price.amount.formattedWithSeparator
         self.currency = order.price.currency
     }

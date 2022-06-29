@@ -10,6 +10,7 @@ import UIKit
 protocol ActiveOrdersListViewDelegate: AnyObject {
     func activeOrdersListViewGetCellsCount(_ activeOrdersListView: ActiveOrdersListView) -> Int?
     func activeOrdersListView(_ activeOrdersListView: ActiveOrdersListView, getOrderAt index: Int) -> ActiveOrdersViewModel?
+    func activeOrdersListView(_ activeOrdersListView: ActiveOrdersListView, didSelectOrderAt index: Int)
 }
 
 class ActiveOrdersListView: UIView {
@@ -46,15 +47,14 @@ class ActiveOrdersListView: UIView {
         activateActiveOrdersListTableViewConstraints()
     }
 
-    static func makeActiveOrdersListTableView(_ delegate: ActiveOrdersListTableViewDataSourceDelegate) -> ActiveOrdersListTableView {
+    static func makeActiveOrdersListTableView(_ delegate: ActiveOrdersListTableViewCustomDelegate) -> ActiveOrdersListTableView {
         let tableView = ActiveOrdersListTableView(frame: .zero, style: .grouped)
-        tableView.dataSourceDelegate = delegate
+        tableView.customDelegate = delegate
         tableView.backgroundColor = .white
         tableView.register(ActiveOrdersListTableViewCell.self, forCellReuseIdentifier: ActiveOrdersListTableViewCell.cellID)
         tableView.translatesAutoresizingMaskIntoConstraints = false
 
         return tableView
-
     }
 
     // MARK: - Layout
@@ -71,7 +71,11 @@ class ActiveOrdersListView: UIView {
 
 // MARK: - ActiveOrdersListTableViewDataSourceDelegate
 
-extension ActiveOrdersListView: ActiveOrdersListTableViewDataSourceDelegate {
+extension ActiveOrdersListView: ActiveOrdersListTableViewCustomDelegate {
+    func activeOrdersListTableView(_ activeOrdersListTableView: ActiveOrdersListTableView, didSelectOrderAt index: Int) {
+        delegate?.activeOrdersListView(self, didSelectOrderAt: index)
+    }
+
     func activeOrdersListTableViewGetCellsCount(_ activeOrdersListTableView: ActiveOrdersListTableView) -> Int? {
         delegate?.activeOrdersListViewGetCellsCount(self)
     }

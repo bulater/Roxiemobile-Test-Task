@@ -7,15 +7,16 @@
 
 import UIKit
 
-protocol ActiveOrdersListTableViewDataSourceDelegate: AnyObject {
+protocol ActiveOrdersListTableViewCustomDelegate: AnyObject {
     func activeOrdersListTableViewGetCellsCount(_ activeOrdersListTableView: ActiveOrdersListTableView) -> Int?
     func activeOrdersListTableView(_ activeOrdersListTableView: ActiveOrdersListTableView, getOrderAt index: Int) -> ActiveOrdersViewModel?
+    func activeOrdersListTableView(_ activeOrdersListTableView: ActiveOrdersListTableView, didSelectOrderAt index: Int)
 }
 
 class ActiveOrdersListTableView: UITableView {
     // MARK: - Public Properties
 
-    weak var dataSourceDelegate: ActiveOrdersListTableViewDataSourceDelegate?
+    weak var customDelegate: ActiveOrdersListTableViewCustomDelegate?
 
     // MARK: - Init
 
@@ -33,14 +34,16 @@ class ActiveOrdersListTableView: UITableView {
 // MARK: - UITableViewDelegate
 
 extension ActiveOrdersListTableView: UITableViewDelegate {
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        customDelegate?.activeOrdersListTableView(self, didSelectOrderAt: indexPath.row)
+    }
 }
 
 // MARK: - UITableViewDataSource
 
 extension ActiveOrdersListTableView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSourceDelegate?.activeOrdersListTableViewGetCellsCount(self) ?? 0
+        return customDelegate?.activeOrdersListTableViewGetCellsCount(self) ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -50,7 +53,7 @@ extension ActiveOrdersListTableView: UITableViewDataSource {
         else {
             return UITableViewCell() }
 
-        let orderViewModel = dataSourceDelegate?.activeOrdersListTableView(self, getOrderAt: indexPath.row)
+        let orderViewModel = customDelegate?.activeOrdersListTableView(self, getOrderAt: indexPath.row)
         cell.configure(with: orderViewModel)
 
         return cell

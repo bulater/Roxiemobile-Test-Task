@@ -62,7 +62,7 @@ class ActiveOrdersListTableViewCell: UITableViewCell {
                                 \(viewModel.endCity).
                                 \(viewModel.endAddress).
                               """
-        orderDateLabel.text = viewModel.orderTime
+        orderDateLabel.text = viewModel.orderTime.dateFormate(with: .date)
         orderAmountLabel.text = "\(viewModel.amount) \(viewModel.currency)"
     }
 
