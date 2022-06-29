@@ -12,7 +12,7 @@ struct ActiveOrders: Codable {
     let startAddress: Address
     let endAddress: Address
     let price: Price
-    let orderTime: Date
+    let orderTime: String
     let vehicle: Vehicle
 }
 

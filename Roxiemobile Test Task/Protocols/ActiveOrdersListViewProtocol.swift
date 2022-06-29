@@ -8,4 +8,5 @@
 import Foundation
 
 protocol ActiveOrdersListViewProtocol: AnyObject {
+    func reloadActiveOrdersTableView()
 }

@@ -27,7 +27,7 @@ class NetworkManager {
 
     // MARK: - Public Methods
 
-    func fetchMarvelHeroesData(completion: @escaping (Result<[ActiveOrders], NetworkError>) -> Void) {
+    func fetchActiveOrdersData(completion: @escaping (Result<[ActiveOrders], NetworkError>) -> Void) {
         guard let url = URL(string: Path.activeOrders) else {
             completion(.failure(.invalidURL))
             return
