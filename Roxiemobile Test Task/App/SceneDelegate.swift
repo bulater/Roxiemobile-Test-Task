@@ -13,13 +13,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        guard let windowScene = (scene as? UIWindowScene) else { return }
-        let viewController = ActiveOrdersListModuleBuilder.createModule()
-        let navigationController = UINavigationController(rootViewController: viewController)
+        let navigationController = UINavigationController()
+        let appCoordinator = AppCoordinator(navigationController: navigationController)
 
+        guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
+
+        appCoordinator.start()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

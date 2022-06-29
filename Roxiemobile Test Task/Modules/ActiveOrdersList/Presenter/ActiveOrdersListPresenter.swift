@@ -28,7 +28,7 @@ class ActiveOrdersListPresenter {
             case .success(let data):
                 let viewModels = data.map { ActiveOrdersViewModel(order: $0) }
                 self.activeOrdersDataSource.activeOrversViewModels = viewModels
-
+                
                 DispatchQueue.main.async {
                     self.view?.reloadActiveOrdersTableView()
                 }
@@ -44,6 +44,7 @@ class ActiveOrdersListPresenter {
 extension ActiveOrdersListPresenter: ActiveOrdersListPresenterProtocol {
     func handleAppearingView() {
         fetchActiveOrdersModels()
+
     }
 
     func getActiveOrderAt(index: Int) -> ActiveOrdersViewModel? {

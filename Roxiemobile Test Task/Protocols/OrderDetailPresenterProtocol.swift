@@ -8,4 +8,5 @@
 import Foundation
 
 protocol OrderDetailPresenterProtocol {
+    var orderDetailViewModel: ActiveOrdersViewModel? { get set}
 }

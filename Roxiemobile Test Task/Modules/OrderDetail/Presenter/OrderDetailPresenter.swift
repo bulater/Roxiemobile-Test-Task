@@ -11,6 +11,7 @@ class OrderDetailPresenter {
     // MARK: - Public Properties
 
     weak var view: OrderDetailViewProtocol?
+    var orderDetailViewModel: ActiveOrdersViewModel?
 
     // MARK: - Init
 
@@ -19,6 +20,7 @@ class OrderDetailPresenter {
     }
 
     // MARK: - Private Methods
+
 }
 
 // MARK: - OrderDetailPresenterProtocol
