@@ -12,7 +12,7 @@ struct ActiveOrdersViewModel {
     var startAdress: String
     var endCity: String
     var endAddress: String
-    var orderTime: Date
+    var orderTime: String
     var amount: String
     var currency: String
 

@@ -27,6 +27,11 @@ class ActiveOrdersListViewController: UIViewController {
         super.viewDidLoad()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter?.handleAppearingView()
+    }
+
     // MARK: - Public Methods
 
 
@@ -36,7 +41,10 @@ class ActiveOrdersListViewController: UIViewController {
 // MARK: - ActiveOrdersListViewProtocol
 
 extension ActiveOrdersListViewController: ActiveOrdersListViewProtocol {
-
+    func reloadActiveOrdersTableView() {
+        guard let view = view as? ActiveOrdersListView else { return }
+        view.activeOrdersListTableView.reloadData()
+    }
 }
 
 // MARK: - ActiveOrdersListViewDelegate

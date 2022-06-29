@@ -19,9 +19,31 @@ class ActiveOrdersListPresenter {
         self.view = view
         self.activeOrdersDataSource = activeOrdersDataSource
     }
+
+    // MARK: - Private Methods
+
+    private func fetchActiveOrdersModels() {
+        NetworkManager.shared.fetchActiveOrdersData { result in
+            switch result {
+            case .success(let data):
+                let viewModels = data.map { ActiveOrdersViewModel(order: $0) }
+                self.activeOrdersDataSource.activeOrversViewModels = viewModels
+                print(self.activeOrdersDataSource.activeOrversViewModels)
+
+                DispatchQueue.main.async {
+                    self.view?.reloadActiveOrdersTableView()
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
 }
 
 // MARK: - ActiveOrdersListPresenterProtocol
 
 extension ActiveOrdersListPresenter: ActiveOrdersListPresenterProtocol {
+    func handleAppearingView() {
+        fetchActiveOrdersModels()
+    }
 }

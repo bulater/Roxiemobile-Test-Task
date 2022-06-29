@@ -50,12 +50,11 @@ class ActiveOrdersListView: UIView {
 
     // MARK: - Public Methods
 
+    // MARK: - Private Methods
+
     private func configureView() {
         backgroundColor = .white
     }
-
-    // MARK: - Private Methods
-
 
     // MARK: - Layout
 
