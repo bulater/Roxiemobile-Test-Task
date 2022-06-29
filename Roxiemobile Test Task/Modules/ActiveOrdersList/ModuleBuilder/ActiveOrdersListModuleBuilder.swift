@@ -10,7 +10,9 @@ import UIKit
 class ActiveOrdersListModuleBuilder: ModuleBuildering {
     static func createModule() -> UIViewController {
         let viewController = ActiveOrdersListViewController()
-        let presenter = ActiveOrdersListPresenter(view: viewController)
+        let activeOrdersDataSource = ActiveOrdersDataSource()
+        let presenter = ActiveOrdersListPresenter(view: viewController,
+                                                  activeOrdersDataSource: activeOrdersDataSource)
 
         viewController.presenter = presenter
 
