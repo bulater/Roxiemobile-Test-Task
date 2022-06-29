@@ -17,9 +17,6 @@ class ActiveOrdersListView: UIView {
     // MARK: - Public Properties
 
     weak var delegate: ActiveOrdersListViewDelegate?
-
-    // MARK: - Private Properties
-
     lazy var activeOrdersListTableView: ActiveOrdersListTableView = { ActiveOrdersListView.makeActiveOrdersListTableView(self) }()
 
     // MARK: - Init

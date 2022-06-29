@@ -35,14 +35,14 @@ class OrderCoordinator: Coordinating {
     // MARK: - Public Methods
 
     func start() {
-        let viewController = OrderDetailModuleBuilder.createModule(with: .default)
+        let viewController = ActiveOrdersListModuleBuilder.createModule(with: .default, self)
         navigationController.pushViewController(viewController, animated: true)
     }
 }
 
 extension OrderCoordinator: OrdersListCoorinating {
     func pushOrderDetail(with order: ActiveOrdersViewModel?) {
-        let viewController = OrderDetailModuleBuilder.createModule(with: .orderDetail(order))
+        let viewController = OrderDetailModuleBuilder.createModule(with: .orderDetail(order), self)
         navigationController.pushViewController(viewController, animated: true)
     }
 }

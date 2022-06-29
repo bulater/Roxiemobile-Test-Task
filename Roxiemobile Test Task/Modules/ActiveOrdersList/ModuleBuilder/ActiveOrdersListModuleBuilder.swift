@@ -8,11 +8,13 @@
 import UIKit
 
 class ActiveOrdersListModuleBuilder: ModuleBuildering {
-    static func createModule(with type: ModuleType) -> UIViewController {
+    static func createModule(with type: ModuleType, _ coordinator: Coordinating) -> UIViewController {
         let viewController = ActiveOrdersListViewController()
         let activeOrdersDataSource = ActiveOrdersDataSource()
+        guard let coordinator = coordinator as? OrdersListCoorinating else { return viewController }
         let presenter = ActiveOrdersListPresenter(view: viewController,
-                                                  activeOrdersDataSource: activeOrdersDataSource)
+                                                  activeOrdersDataSource: activeOrdersDataSource,
+                                                  coordinator: coordinator)
 
         viewController.presenter = presenter
 

@@ -52,10 +52,10 @@ class NetworkManager {
         task.resume()
     }
 
-    func getOrderVehicleImage(from model: ActiveOrdersViewModel) -> UIImage? {
+    func getOrderVehicleImage(from model: ActiveOrdersViewModel?) -> UIImage? {
         var image = UIImage()
         let imageCahche = ImageCache.shared
-        let url = Path.image + model.vehicleImage
+        let url = Path.image + (model?.vehicleImage ?? "")
         if let imageFromCache = imageCahche.object(forKey: url as NSString) {
             image = imageFromCache
             return image
