@@ -19,7 +19,7 @@ struct ActiveOrdersViewModel {
     init(order: ActiveOrders) {
         self.startCity = order.startAddress.city
         self.startAdress = order.startAddress.address
-        self.endCity = order.endAddress.address
+        self.endCity = order.endAddress.city
         self.endAddress = order.endAddress.address
         self.orderTime = order.orderTime
         self.amount = String(order.price.amount)

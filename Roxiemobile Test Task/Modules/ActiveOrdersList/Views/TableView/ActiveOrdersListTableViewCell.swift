@@ -54,8 +54,14 @@ class ActiveOrdersListTableViewCell: UITableViewCell {
 
     func configure(with viewModel: ActiveOrdersViewModel?) {
         guard let viewModel = viewModel else { return }
-        startAdressLabel.text = "\(viewModel.startCity). \(viewModel.endAddress)"
-        endAdressLabel.text = "\(viewModel.endCity). \(viewModel.endAddress)"
+        startAdressLabel.text = """
+                                \(viewModel.startCity).
+                                \(viewModel.startAdress).
+                                """
+        endAdressLabel.text = """
+                                \(viewModel.endCity).
+                                \(viewModel.endAddress).
+                              """
         orderDateLabel.text = viewModel.orderTime
         orderAmountLabel.text = "\(viewModel.amount).\(viewModel.currency)"
 
