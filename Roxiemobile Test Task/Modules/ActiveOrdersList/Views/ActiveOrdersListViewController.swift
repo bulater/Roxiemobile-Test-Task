@@ -22,6 +22,8 @@ class ActiveOrdersListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Orders"
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 
     override func viewWillAppear(_ animated: Bool) {

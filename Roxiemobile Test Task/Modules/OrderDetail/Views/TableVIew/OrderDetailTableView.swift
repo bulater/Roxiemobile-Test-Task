@@ -32,6 +32,9 @@ class OrderDetailTableView: UITableView {
 // MARK: - UITableViewDelegate
 
 extension OrderDetailTableView: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return superview?.frame.height ?? 0
+    }
 }
 
 // MARK: - UITableViewDataSource

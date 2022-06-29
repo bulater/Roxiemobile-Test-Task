@@ -40,9 +40,20 @@ class OrderCoordinator: Coordinating {
     }
 }
 
+// MARK: - Public OrdersListCoorinating
+
 extension OrderCoordinator: OrdersListCoorinating {
     func pushOrderDetail(with order: ActiveOrdersViewModel?) {
         let viewController = OrderDetailModuleBuilder.createModule(with: .orderDetail(order), self)
         navigationController.pushViewController(viewController, animated: true)
+    }
+}
+
+// MARK: - Public OrderDetailCoordinating
+
+extension OrderCoordinator: OrderDetailCoordinating {
+    func popToOrdersList() {
+        guard let viewController = navigationController.viewControllers.first(where: { $0 is ActiveOrdersListViewController } ) else { return  }
+        navigationController.popToViewController(viewController, animated: true)
     }
 }
