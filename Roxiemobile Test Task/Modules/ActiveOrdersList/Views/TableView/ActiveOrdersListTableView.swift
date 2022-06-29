@@ -8,7 +8,8 @@
 import UIKit
 
 protocol ActiveOrdersListTableViewDataSourceDelegate: AnyObject {
-
+    func activeOrdersListTableViewGetCellsCount(_ activeOrdersListTableView: ActiveOrdersListTableView) -> Int?
+    func activeOrdersListTableView(_ activeOrdersListTableView: ActiveOrdersListTableView, getOrderAt index: Int) -> ActiveOrdersViewModel?
 }
 
 class ActiveOrdersListTableView: UITableView {
@@ -39,7 +40,7 @@ extension ActiveOrdersListTableView: UITableViewDelegate {
 
 extension ActiveOrdersListTableView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return dataSourceDelegate?.activeOrdersListTableViewGetCellsCount(self) ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -48,6 +49,9 @@ extension ActiveOrdersListTableView: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as? ActiveOrdersListTableViewCell
         else {
             return UITableViewCell() }
+
+        let orderViewModel = dataSourceDelegate?.activeOrdersListTableView(self, getOrderAt: indexPath.row)
+        cell.configure(with: orderViewModel)
 
         return cell
     }

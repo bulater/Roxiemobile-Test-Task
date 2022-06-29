@@ -8,6 +8,8 @@
 import UIKit
 
 protocol ActiveOrdersListViewDelegate: AnyObject {
+    func activeOrdersListViewGetCellsCount(_ activeOrdersListView: ActiveOrdersListView) -> Int?
+    func activeOrdersListView(_ activeOrdersListView: ActiveOrdersListView, getOrderAt index: Int) -> ActiveOrdersViewModel?
 }
 
 class ActiveOrdersListView: UIView {
@@ -31,6 +33,14 @@ class ActiveOrdersListView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // MARK: - Public Methods
+
+    // MARK: - Private Methods
+
+    private func configureView() {
+        backgroundColor = .white
+    }
+
     // MARK: - Creating Subviews
 
     func addSubviews() {
@@ -46,14 +56,7 @@ class ActiveOrdersListView: UIView {
         tableView.translatesAutoresizingMaskIntoConstraints = false
 
         return tableView
-    }
 
-    // MARK: - Public Methods
-
-    // MARK: - Private Methods
-
-    private func configureView() {
-        backgroundColor = .white
     }
 
     // MARK: - Layout
@@ -71,5 +74,11 @@ class ActiveOrdersListView: UIView {
 // MARK: - ActiveOrdersListTableViewDataSourceDelegate
 
 extension ActiveOrdersListView: ActiveOrdersListTableViewDataSourceDelegate {
+    func activeOrdersListTableViewGetCellsCount(_ activeOrdersListTableView: ActiveOrdersListTableView) -> Int? {
+        delegate?.activeOrdersListViewGetCellsCount(self)
+    }
 
+    func activeOrdersListTableView(_ activeOrdersListTableView: ActiveOrdersListTableView, getOrderAt index: Int) -> ActiveOrdersViewModel? {
+        delegate?.activeOrdersListView(self, getOrderAt: index)
+    }
 }
