@@ -16,6 +16,10 @@ class OrderDetailTableViewCell: UITableViewCell {
     lazy var endAdressLabel: UILabel = { OrderDetailTableViewCell.makeLabel() }()
     lazy var orderDateLabel: UILabel = { OrderDetailTableViewCell.makeLabel() }()
     lazy var orderAmountLabel: UILabel = { OrderDetailTableViewCell.makeLabel() }()
+    lazy var regNumberLabel: UILabel = { OrderDetailTableViewCell.makeLabel() }()
+    lazy var modelNameLabel: UILabel = { OrderDetailTableViewCell.makeLabel() }()
+    lazy var driverNameLabel: UILabel = { OrderDetailTableViewCell.makeLabel() }()
+    lazy var vehicleImageView: UIImageView = { OrderDetailTableViewCell.makeVehicleImageView() }()
 
     lazy var adressStackView: UIStackView = {
         OrderDetailTableViewCell.makeStackViewWith(axis: .horizontal,
@@ -26,6 +30,13 @@ class OrderDetailTableViewCell: UITableViewCell {
 
     lazy var orderDetailsStackView: UIStackView = {
         OrderDetailTableViewCell.makeStackViewWith(axis: .horizontal,
+                                                        spacing: 10,
+                                                        distribution: .fillEqually,
+                                                        layoutInset: LayoutConstants.StackView.contentInset)
+    }()
+
+    lazy var vehicleInfoStackView: UIStackView = {
+        OrderDetailTableViewCell.makeStackViewWith(axis: .vertical,
                                                         spacing: 10,
                                                         distribution: .fillEqually,
                                                         layoutInset: LayoutConstants.StackView.contentInset)
@@ -44,10 +55,17 @@ class OrderDetailTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         addSubviews()
+        configureView()
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    // MARK: - Private Methods
+
+    private func configureView() {
+        selectionStyle = .none
     }
 
     // MARK: - Public Methods
@@ -62,8 +80,13 @@ class OrderDetailTableViewCell: UITableViewCell {
                                 \(viewModel.endCity).
                                 \(viewModel.endAddress).
                               """
-        orderDateLabel.text = viewModel.orderTime.dateFormate(with: .date)
+        orderDateLabel.text = viewModel.orderTime.dateFormate(with: .dateAndTime)
         orderAmountLabel.text = "\(viewModel.amount) \(viewModel.currency)"
+
+        regNumberLabel.text = viewModel.regNumber
+        modelNameLabel.text = viewModel.modelName
+        driverNameLabel.text = viewModel.driverName
+        NetworkManager.shared.setOrderVehicleImage(from: viewModel, image: self.vehicleImageView)
     }
 
     // MARK: - Creating Subviews
@@ -78,11 +101,21 @@ class OrderDetailTableViewCell: UITableViewCell {
 
         activateOrderAdressStackViewConstraints()
         activateOrderDetailsStackViewConstraints()
+
+        addSubview(vehicleImageView)
+        activateVehicleImageViewConstraints()
+
+        contentView.addSubview(vehicleInfoStackView)
+        vehicleInfoStackView.addArrangedSubview(driverNameLabel)
+        vehicleInfoStackView.addArrangedSubview(regNumberLabel)
+        vehicleInfoStackView.addArrangedSubview(modelNameLabel)
+        activateVehicleInfoStackViewConstraints()
     }
 
     static func makeLabel() -> UILabel {
         let label = UILabel()
-        label.numberOfLines = 2
+        label.numberOfLines = 0
+        label.textAlignment = .center
         label.textColor = .black
         label.font = UIFont(name: "Avenir Next Regular", size: 14)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -102,23 +135,49 @@ class OrderDetailTableViewCell: UITableViewCell {
         return stackView
     }
 
-    // MARK: - Layout
+    static func makeVehicleImageView() -> UIImageView {
+        let view = UIImageView()
+        view.layer.cornerRadius = 10
+        view.layer.masksToBounds = true
+        view.translatesAutoresizingMaskIntoConstraints = false
 
-    private func activateOrderAdressStackViewConstraints() {
-        NSLayoutConstraint.activate([
-            adressStackView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            adressStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            adressStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            adressStackView.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.5)
-        ])
+        return view
     }
+
+    // MARK: - Layout
 
     private func activateOrderDetailsStackViewConstraints() {
         NSLayoutConstraint.activate([
             orderDetailsStackView.topAnchor.constraint(equalTo: adressStackView.bottomAnchor),
             orderDetailsStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             orderDetailsStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            orderDetailsStackView.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.5)
+            orderDetailsStackView.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.1)
+        ])
+    }
+
+    private func activateOrderAdressStackViewConstraints() {
+        NSLayoutConstraint.activate([
+            adressStackView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            adressStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            adressStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            adressStackView.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.1)
+        ])
+    }
+
+    private func activateVehicleImageViewConstraints() {
+        NSLayoutConstraint.activate([
+            vehicleImageView.topAnchor.constraint(equalTo: orderDetailsStackView.bottomAnchor),
+            vehicleImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            vehicleImageView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.5),
+            vehicleImageView.heightAnchor.constraint(equalTo: widthAnchor, multiplier: 0.5)
+        ])
+    }
+
+    private func activateVehicleInfoStackViewConstraints() {
+        NSLayoutConstraint.activate([
+            vehicleInfoStackView.topAnchor.constraint(equalTo: vehicleImageView.bottomAnchor),
+            vehicleInfoStackView.widthAnchor.constraint(equalTo: widthAnchor),
+            vehicleInfoStackView.heightAnchor.constraint(equalTo: widthAnchor, multiplier: 0.3)
         ])
     }
 }

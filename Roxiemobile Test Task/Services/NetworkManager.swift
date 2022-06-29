@@ -52,13 +52,12 @@ class NetworkManager {
         task.resume()
     }
 
-    func getOrderVehicleImage(from model: ActiveOrdersViewModel?) -> UIImage? {
-        var image = UIImage()
+    func setOrderVehicleImage(from model: ActiveOrdersViewModel?, image: UIImageView?) {
         let imageCahche = ImageCache.shared
         let url = Path.image + (model?.vehicleImage ?? "")
         if let imageFromCache = imageCahche.object(forKey: url as NSString) {
-            image = imageFromCache
-            return image
+            image?.image = imageFromCache
+            return
         }
 
         DispatchQueue.global().async {
@@ -71,13 +70,11 @@ class NetworkManager {
 
             DispatchQueue.main.async {
                 guard let imageToCache = UIImage(data: imageData) else { return }
-                    image = imageToCache
+                image?.image = imageToCache
 
                 imageCahche.setObject(imageToCache, forKey: url as NSString)
             }
         }
-        
-        return image
     }
 }
 

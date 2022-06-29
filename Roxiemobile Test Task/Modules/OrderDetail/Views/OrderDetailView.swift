@@ -49,6 +49,7 @@ class OrderDetailView: UIView {
         let tableView = OrderDetailTableView(frame: .zero, style: .grouped)
         tableView.customDelegate = delegate
         tableView.backgroundColor = .white
+        tableView.isScrollEnabled = false
         tableView.register(OrderDetailTableViewCell.self, forCellReuseIdentifier: OrderDetailTableViewCell.cellID)
         tableView.translatesAutoresizingMaskIntoConstraints = false
 

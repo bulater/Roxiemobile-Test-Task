@@ -12,7 +12,10 @@ class OrderDetailViewController: UIViewController {
 
     var presenter: OrderDetailPresenterProtocol?
 
+    lazy var backButton = UIBarButtonItem()
+
     // MARK: - LifeCycle
+
     override func loadView() {
         super.loadView()
         let view = OrderDetailView()
@@ -22,10 +25,23 @@ class OrderDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationBar()
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    // MARK: - Private Methods
+
+    private func setupNavigationBar() {
+        backButton = UIBarButtonItem(image: UIImage(systemName: "arrow.backward"),
+                                               style: .plain,
+                                               target: self,
+                                               action: #selector(didTapBackButton))
+        backButton.tintColor = .black
+
+        navigationItem.leftBarButtonItem = backButton
+    }
+
+    @objc private func didTapBackButton() {
+        presenter?.handleTapBackButton()
     }
 }
 

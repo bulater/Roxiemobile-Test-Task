@@ -12,11 +12,13 @@ class OrderDetailPresenter {
 
     weak var view: OrderDetailViewProtocol?
     var orderDetailViewModel: ActiveOrdersViewModel?
+    var coordinator: OrderDetailCoordinating
 
     // MARK: - Init
 
-    init(view: OrderDetailViewProtocol) {
+    init(view: OrderDetailViewProtocol, coordinator: OrderDetailCoordinating) {
         self.view = view
+        self.coordinator = coordinator
     }
 }
 
@@ -27,5 +29,9 @@ extension OrderDetailPresenter: OrderDetailPresenterProtocol {
         guard let order = orderDetailViewModel else { return nil }
 
         return order
+    }
+
+    func handleTapBackButton() {
+        coordinator.popToOrdersList()
     }
 }
