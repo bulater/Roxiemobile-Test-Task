@@ -37,5 +37,8 @@ extension OrderDetailViewController: OrderDetailViewProtocol {
 // MARK: - ActiveOrdersListViewDelegate
 
 extension OrderDetailViewController: OrderDetailViewViewDelegate {
+    func orderDetailViewGetOrder(_ orderDetailView: OrderDetailView) -> ActiveOrdersViewModel? {
+        presenter?.getOrder()
+    }
 }
 

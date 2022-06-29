@@ -8,7 +8,7 @@
 import UIKit
 
 class OrderDetailModuleBuilder: ModuleBuildering {
-    static func createModule(with type: ModuleType) -> UIViewController {
+    static func createModule(with type: ModuleType, _ coordinator: Coordinating) -> UIViewController {
         let viewController = OrderDetailViewController()
         let presenter = OrderDetailPresenter(view: viewController)
 

@@ -13,5 +13,5 @@ enum ModuleType {
 }
 
 protocol ModuleBuildering {
-    static func createModule(with type: ModuleType) -> UIViewController
+    static func createModule(with type: ModuleType, _ coordinator: Coordinating) -> UIViewController
 }

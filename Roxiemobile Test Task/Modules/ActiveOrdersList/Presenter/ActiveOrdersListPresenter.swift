@@ -12,12 +12,16 @@ class ActiveOrdersListPresenter {
 
     weak var view: ActiveOrdersListViewProtocol?
     var activeOrdersDataSource: ActiveOrdersDataSource
+    var coordinator: OrdersListCoorinating
 
     // MARK: - Init
 
-    init(view: ActiveOrdersListViewProtocol, activeOrdersDataSource: ActiveOrdersDataSource) {
+    init(view: ActiveOrdersListViewProtocol,
+         activeOrdersDataSource: ActiveOrdersDataSource,
+         coordinator: OrdersListCoorinating) {
         self.view = view
         self.activeOrdersDataSource = activeOrdersDataSource
+        self.coordinator = coordinator
     }
 
     // MARK: - Private Methods
@@ -44,7 +48,6 @@ class ActiveOrdersListPresenter {
 extension ActiveOrdersListPresenter: ActiveOrdersListPresenterProtocol {
     func handleAppearingView() {
         fetchActiveOrdersModels()
-
     }
 
     func getActiveOrderAt(index: Int) -> ActiveOrdersViewModel? {
@@ -56,6 +59,7 @@ extension ActiveOrdersListPresenter: ActiveOrdersListPresenterProtocol {
     }
 
     func handleSelectOrederAt(index: Int) {
-
+        let models = activeOrdersDataSource.activeOrversViewModels
+        coordinator.pushOrderDetail(with: models[index])
     }
 }

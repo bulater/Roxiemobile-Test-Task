@@ -18,12 +18,14 @@ class OrderDetailPresenter {
     init(view: OrderDetailViewProtocol) {
         self.view = view
     }
-
-    // MARK: - Private Methods
-
 }
 
 // MARK: - OrderDetailPresenterProtocol
 
 extension OrderDetailPresenter: OrderDetailPresenterProtocol {
+    func getOrder() -> ActiveOrdersViewModel? {
+        guard let order = orderDetailViewModel else { return nil }
+
+        return order
+    }
 }

@@ -34,6 +34,8 @@
 		9ECF70ED286B7D3000B59DA3 /* ActiveOrdersListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF70EC286B7D3000B59DA3 /* ActiveOrdersListTableView.swift */; };
 		9ED95F12286C658E008F1F65 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED95F11286C658E008F1F65 /* AppCoordinator.swift */; };
 		9ED95F14286C65A4008F1F65 /* OrderCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED95F13286C65A4008F1F65 /* OrderCoordinator.swift */; };
+		9ED95F17286C6C21008F1F65 /* OrderDetailTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED95F16286C6C21008F1F65 /* OrderDetailTableView.swift */; };
+		9ED95F19286C6C2A008F1F65 /* OrderDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED95F18286C6C2A008F1F65 /* OrderDetailTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,8 @@
 		9ECF70EC286B7D3000B59DA3 /* ActiveOrdersListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveOrdersListTableView.swift; sourceTree = "<group>"; };
 		9ED95F11286C658E008F1F65 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		9ED95F13286C65A4008F1F65 /* OrderCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCoordinator.swift; sourceTree = "<group>"; };
+		9ED95F16286C6C21008F1F65 /* OrderDetailTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailTableView.swift; sourceTree = "<group>"; };
+		9ED95F18286C6C2A008F1F65 /* OrderDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +140,7 @@
 			children = (
 				9E69113E286C3E1200A4B6D2 /* OrderDetailViewController.swift */,
 				9E691140286C3E1900A4B6D2 /* OrderDetailView.swift */,
+				9ED95F15286C6C0A008F1F65 /* TableVIew */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -290,6 +295,15 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		9ED95F15286C6C0A008F1F65 /* TableVIew */ = {
+			isa = PBXGroup;
+			children = (
+				9ED95F16286C6C21008F1F65 /* OrderDetailTableView.swift */,
+				9ED95F18286C6C2A008F1F65 /* OrderDetailTableViewCell.swift */,
+			);
+			path = TableVIew;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -365,6 +379,7 @@
 				9E69113D286C3DFB00A4B6D2 /* OrderDetailPresenter.swift in Sources */,
 				9ECF70C0286B73A400B59DA3 /* AppDelegate.swift in Sources */,
 				9E69112F286C16A700A4B6D2 /* ActiveOrdersDataSource.swift in Sources */,
+				9ED95F17286C6C21008F1F65 /* OrderDetailTableView.swift in Sources */,
 				9E691141286C3E1900A4B6D2 /* OrderDetailView.swift in Sources */,
 				9E691124286B936800A4B6D2 /* ActiveOrdersListTableViewCell.swift in Sources */,
 				9ECF70E0286B77D800B59DA3 /* ActiveOrdersListPresenter.swift in Sources */,
@@ -373,6 +388,7 @@
 				9E69113B286C3DDB00A4B6D2 /* OrderDetailModuleBuilder.swift in Sources */,
 				9ED95F14286C65A4008F1F65 /* OrderCoordinator.swift in Sources */,
 				9E691135286C3BA600A4B6D2 /* String+DateFormatter.swift in Sources */,
+				9ED95F19286C6C2A008F1F65 /* OrderDetailTableViewCell.swift in Sources */,
 				9ED95F12286C658E008F1F65 /* AppCoordinator.swift in Sources */,
 				9E691144286C3EA000A4B6D2 /* OrderDetailViewProtocol.swift in Sources */,
 				9ECF70E7286B793100B59DA3 /* ActiveOrdersListPresenterProtocol.swift in Sources */,
