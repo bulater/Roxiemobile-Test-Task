@@ -11,11 +11,13 @@ class ActiveOrdersListPresenter {
     // MARK: - Public Properties
 
     weak var view: ActiveOrdersListViewProtocol?
+    var activeOrdersDataSource: ActiveOrdersDataSource
 
     // MARK: - Init
 
-    init(view: ActiveOrdersListViewProtocol) {
+    init(view: ActiveOrdersListViewProtocol, activeOrdersDataSource: ActiveOrdersDataSource) {
         self.view = view
+        self.activeOrdersDataSource = activeOrdersDataSource
     }
 }
 
