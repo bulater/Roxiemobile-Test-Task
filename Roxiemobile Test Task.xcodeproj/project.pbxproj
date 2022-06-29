@@ -12,6 +12,8 @@
 		9E69112A286C127F00A4B6D2 /* ActiveOrders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E691129286C127F00A4B6D2 /* ActiveOrders.swift */; };
 		9E69112D286C135E00A4B6D2 /* ActiveOrdersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E69112C286C135E00A4B6D2 /* ActiveOrdersViewModel.swift */; };
 		9E69112F286C16A700A4B6D2 /* ActiveOrdersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E69112E286C16A700A4B6D2 /* ActiveOrdersDataSource.swift */; };
+		9E691133286C37C100A4B6D2 /* Formatter+ISO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E691132286C37C100A4B6D2 /* Formatter+ISO.swift */; };
+		9E691135286C3BA600A4B6D2 /* String+DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E691134286C3BA600A4B6D2 /* String+DateFormatter.swift */; };
 		9ECF70C0286B73A400B59DA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF70BF286B73A400B59DA3 /* AppDelegate.swift */; };
 		9ECF70C2286B73A400B59DA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF70C1286B73A400B59DA3 /* SceneDelegate.swift */; };
 		9ECF70C9286B73A800B59DA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9ECF70C8286B73A800B59DA3 /* Assets.xcassets */; };
@@ -32,6 +34,8 @@
 		9E691129286C127F00A4B6D2 /* ActiveOrders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveOrders.swift; sourceTree = "<group>"; };
 		9E69112C286C135E00A4B6D2 /* ActiveOrdersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveOrdersViewModel.swift; sourceTree = "<group>"; };
 		9E69112E286C16A700A4B6D2 /* ActiveOrdersDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveOrdersDataSource.swift; sourceTree = "<group>"; };
+		9E691132286C37C100A4B6D2 /* Formatter+ISO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Formatter+ISO.swift"; sourceTree = "<group>"; };
+		9E691134286C3BA600A4B6D2 /* String+DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+DateFormatter.swift"; sourceTree = "<group>"; };
 		9ECF70BC286B73A400B59DA3 /* Roxiemobile Test Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Roxiemobile Test Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ECF70BF286B73A400B59DA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9ECF70C1286B73A400B59DA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +96,15 @@
 			path = DataSource;
 			sourceTree = "<group>";
 		};
+		9E691131286C37A600A4B6D2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9E691132286C37C100A4B6D2 /* Formatter+ISO.swift */,
+				9E691134286C3BA600A4B6D2 /* String+DateFormatter.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		9ECF70B3286B73A400B59DA3 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +124,7 @@
 		9ECF70BE286B73A400B59DA3 /* Roxiemobile Test Task */ = {
 			isa = PBXGroup;
 			children = (
+				9E691131286C37A600A4B6D2 /* Extensions */,
 				9E691125286C113600A4B6D2 /* Services */,
 				9ECF70D3286B73C400B59DA3 /* App */,
 				9ECF70E8286B794D00B59DA3 /* Assembler */,
@@ -289,7 +303,9 @@
 				9E691124286B936800A4B6D2 /* ActiveOrdersListTableViewCell.swift in Sources */,
 				9ECF70E0286B77D800B59DA3 /* ActiveOrdersListPresenter.swift in Sources */,
 				9E69112A286C127F00A4B6D2 /* ActiveOrders.swift in Sources */,
+				9E691135286C3BA600A4B6D2 /* String+DateFormatter.swift in Sources */,
 				9ECF70E7286B793100B59DA3 /* ActiveOrdersListPresenterProtocol.swift in Sources */,
+				9E691133286C37C100A4B6D2 /* Formatter+ISO.swift in Sources */,
 				9ECF70ED286B7D3000B59DA3 /* ActiveOrdersListTableView.swift in Sources */,
 				9ECF70EA286B795B00B59DA3 /* Assembler.swift in Sources */,
 				9E69112D286C135E00A4B6D2 /* ActiveOrdersViewModel.swift in Sources */,

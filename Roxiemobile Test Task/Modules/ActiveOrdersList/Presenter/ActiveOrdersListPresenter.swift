@@ -28,7 +28,6 @@ class ActiveOrdersListPresenter {
             case .success(let data):
                 let viewModels = data.map { ActiveOrdersViewModel(order: $0) }
                 self.activeOrdersDataSource.activeOrversViewModels = viewModels
-                print(self.activeOrdersDataSource.activeOrversViewModels)
 
                 DispatchQueue.main.async {
                     self.view?.reloadActiveOrdersTableView()

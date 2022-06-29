@@ -12,9 +12,6 @@ class ActiveOrdersListViewController: UIViewController {
 
     var presenter: ActiveOrdersListPresenterProtocol?
 
-    // MARK: - Private Properties
-
-
     // MARK: - LifeCycle
     override func loadView() {
         super.loadView()
@@ -31,11 +28,6 @@ class ActiveOrdersListViewController: UIViewController {
         super.viewWillAppear(animated)
         presenter?.handleAppearingView()
     }
-
-    // MARK: - Public Methods
-
-    // MARK: - Private Methods
-
 }
 
 // MARK: - ActiveOrdersListViewProtocol

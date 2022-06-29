@@ -63,8 +63,7 @@ class ActiveOrdersListTableViewCell: UITableViewCell {
                                 \(viewModel.endAddress).
                               """
         orderDateLabel.text = viewModel.orderTime
-        orderAmountLabel.text = "\(viewModel.amount).\(viewModel.currency)"
-
+        orderAmountLabel.text = "\(viewModel.amount) \(viewModel.currency)"
     }
 
     // MARK: - Creating Subviews
