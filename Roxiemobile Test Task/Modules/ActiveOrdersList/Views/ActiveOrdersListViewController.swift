@@ -42,6 +42,10 @@ extension ActiveOrdersListViewController: ActiveOrdersListViewProtocol {
 // MARK: - ActiveOrdersListViewDelegate
 
 extension ActiveOrdersListViewController: ActiveOrdersListViewDelegate {
+    func activeOrdersListView(_ activeOrdersListView: ActiveOrdersListView, didSelectOrderAt index: Int) {
+        presenter?.handleSelectOrederAt(index: index)
+    }
+
     func activeOrdersListViewGetCellsCount(_ activeOrdersListView: ActiveOrdersListView) -> Int? {
         presenter?.getActiveOrdersCount()
     }

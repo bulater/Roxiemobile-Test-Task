@@ -8,11 +8,16 @@
 import Foundation
 
 extension String {
-    func dateFormate() -> String {
+    enum DateFormat: String {
+        case date = "MM-dd-yyyy"
+        case dateAndTime = "MM-dd-yyyy HH:mm"
+    }
+    
+    func dateFormate(with type: DateFormat) -> String {
         let dateFormatter = ISO8601DateFormatter()
         guard let theDate = dateFormatter.date(from: self) else { return ""}
         let newDateFormater = DateFormatter()
-        newDateFormater.dateFormat = "MM-dd-yyyy HH:mm"
+        newDateFormater.dateFormat = type.rawValue
 
         return newDateFormater.string(from: theDate)
     }
