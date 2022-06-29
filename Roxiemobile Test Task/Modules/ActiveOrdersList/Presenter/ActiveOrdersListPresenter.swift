@@ -27,12 +27,12 @@ class ActiveOrdersListPresenter {
     // MARK: - Private Methods
 
     private func fetchActiveOrdersModels() {
-        NetworkManager.shared.fetchActiveOrdersData { result in
+        NetworkManager.shared.fetchActiveOrdersData(of: [ActiveOrders].self) { result in
             switch result {
             case .success(let data):
                 let viewModels = data.map { ActiveOrdersViewModel(order: $0) }
                 self.activeOrdersDataSource.activeOrversViewModels = viewModels
-                
+
                 DispatchQueue.main.async {
                     self.view?.reloadActiveOrdersTableView()
                 }

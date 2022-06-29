@@ -28,7 +28,7 @@ class NetworkManager {
 
     // MARK: - Public Methods
 
-    func fetchActiveOrdersData(completion: @escaping (Result<[ActiveOrders], NetworkError>) -> Void) {
+    func fetchActiveOrdersData<T: Codable>(of type: T.Type, completion: @escaping (Result<T, NetworkError>) -> Void) {
         guard let url = URL(string: Path.activeOrders) else {
             completion(.failure(.invalidURL))
             return
@@ -41,7 +41,7 @@ class NetworkManager {
             }
 
             do {
-                let decodedData = try self.decoder.decode([ActiveOrders].self, from: parseredData)
+                let decodedData = try self.decoder.decode(T.self, from: parseredData)
                 completion(.success(decodedData))
             } catch {
                 print(error.localizedDescription)
