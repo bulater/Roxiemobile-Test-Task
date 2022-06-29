@@ -32,6 +32,8 @@
 		9ECF70E7286B793100B59DA3 /* ActiveOrdersListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF70E6286B793100B59DA3 /* ActiveOrdersListPresenterProtocol.swift */; };
 		9ECF70EA286B795B00B59DA3 /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF70E9286B795B00B59DA3 /* Assembler.swift */; };
 		9ECF70ED286B7D3000B59DA3 /* ActiveOrdersListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF70EC286B7D3000B59DA3 /* ActiveOrdersListTableView.swift */; };
+		9ED95F12286C658E008F1F65 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED95F11286C658E008F1F65 /* AppCoordinator.swift */; };
+		9ED95F14286C65A4008F1F65 /* OrderCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED95F13286C65A4008F1F65 /* OrderCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		9ECF70E6286B793100B59DA3 /* ActiveOrdersListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveOrdersListPresenterProtocol.swift; sourceTree = "<group>"; };
 		9ECF70E9286B795B00B59DA3 /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
 		9ECF70EC286B7D3000B59DA3 /* ActiveOrdersListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveOrdersListTableView.swift; sourceTree = "<group>"; };
+		9ED95F11286C658E008F1F65 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		9ED95F13286C65A4008F1F65 /* OrderCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +175,7 @@
 		9ECF70BE286B73A400B59DA3 /* Roxiemobile Test Task */ = {
 			isa = PBXGroup;
 			children = (
+				9ED95F10286C6581008F1F65 /* Coordinator */,
 				9E691131286C37A600A4B6D2 /* Extensions */,
 				9E691125286C113600A4B6D2 /* Services */,
 				9ECF70D3286B73C400B59DA3 /* App */,
@@ -276,6 +281,15 @@
 			path = TableView;
 			sourceTree = "<group>";
 		};
+		9ED95F10286C6581008F1F65 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				9ED95F11286C658E008F1F65 /* AppCoordinator.swift */,
+				9ED95F13286C65A4008F1F65 /* OrderCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -357,7 +371,9 @@
 				9E69112A286C127F00A4B6D2 /* ActiveOrders.swift in Sources */,
 				9E69113F286C3E1200A4B6D2 /* OrderDetailViewController.swift in Sources */,
 				9E69113B286C3DDB00A4B6D2 /* OrderDetailModuleBuilder.swift in Sources */,
+				9ED95F14286C65A4008F1F65 /* OrderCoordinator.swift in Sources */,
 				9E691135286C3BA600A4B6D2 /* String+DateFormatter.swift in Sources */,
+				9ED95F12286C658E008F1F65 /* AppCoordinator.swift in Sources */,
 				9E691144286C3EA000A4B6D2 /* OrderDetailViewProtocol.swift in Sources */,
 				9ECF70E7286B793100B59DA3 /* ActiveOrdersListPresenterProtocol.swift in Sources */,
 				9E691133286C37C100A4B6D2 /* Formatter+ISO.swift in Sources */,

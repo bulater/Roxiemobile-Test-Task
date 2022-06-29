@@ -7,6 +7,11 @@
 
 import UIKit
 
+enum ModuleType {
+    case orderDetail(ActiveOrdersViewModel?)
+    case `default`
+}
+
 protocol ModuleBuildering {
-    static func createModule() -> UIViewController
+    static func createModule(with type: ModuleType) -> UIViewController
 }

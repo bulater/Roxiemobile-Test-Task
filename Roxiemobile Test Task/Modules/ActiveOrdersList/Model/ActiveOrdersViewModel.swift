@@ -15,6 +15,7 @@ struct ActiveOrdersViewModel {
     var orderTime: String
     var amount: String
     var currency: String
+    var vehicleImage: String
 
     init(order: ActiveOrders) {
         self.startCity = order.startAddress.city
@@ -24,5 +25,6 @@ struct ActiveOrdersViewModel {
         self.orderTime = order.orderTime
         self.amount = order.price.amount.formattedWithSeparator
         self.currency = order.price.currency
+        self.vehicleImage = order.vehicle.photo
     }
 }
