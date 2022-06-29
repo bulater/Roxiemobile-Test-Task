@@ -23,6 +23,7 @@ class NetworkManager {
 
     private enum Path {
         static let activeOrders = "https://www.roxiemobile.ru/careers/test/orders.json"
+        static let image = "https://www.roxiemobile.ru/careers/test/images/"
     }
 
     // MARK: - Public Methods
@@ -49,6 +50,34 @@ class NetworkManager {
         }
 
         task.resume()
+    }
+
+    func getOrderVehicleImage(from model: ActiveOrdersViewModel) -> UIImage? {
+        var image = UIImage()
+        let imageCahche = ImageCache.shared
+        let url = Path.image + model.vehicleImage
+        if let imageFromCache = imageCahche.object(forKey: url as NSString) {
+            image = imageFromCache
+            return image
+        }
+
+        DispatchQueue.global().async {
+            guard
+                let imageUrl = URL(string: url),
+                let imageData = try? Data(contentsOf: imageUrl)
+            else {
+                return
+            }
+
+            DispatchQueue.main.async {
+                guard let imageToCache = UIImage(data: imageData) else { return }
+                    image = imageToCache
+
+                imageCahche.setObject(imageToCache, forKey: url as NSString)
+            }
+        }
+        
+        return image
     }
 }
 
