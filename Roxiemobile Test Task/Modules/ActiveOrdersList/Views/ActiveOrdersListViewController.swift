@@ -34,8 +34,8 @@ class ActiveOrdersListViewController: UIViewController {
 
     // MARK: - Public Methods
 
-
     // MARK: - Private Methods
+
 }
 
 // MARK: - ActiveOrdersListViewProtocol
@@ -50,5 +50,11 @@ extension ActiveOrdersListViewController: ActiveOrdersListViewProtocol {
 // MARK: - ActiveOrdersListViewDelegate
 
 extension ActiveOrdersListViewController: ActiveOrdersListViewDelegate {
+    func activeOrdersListViewGetCellsCount(_ activeOrdersListView: ActiveOrdersListView) -> Int? {
+        presenter?.getActiveOrdersCount()
+    }
 
+    func activeOrdersListView(_ activeOrdersListView: ActiveOrdersListView, getOrderAt index: Int) -> ActiveOrdersViewModel? {
+        presenter?.getActiveOrderAt(index: index)
+    }
 }

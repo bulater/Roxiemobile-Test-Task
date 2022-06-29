@@ -46,4 +46,12 @@ extension ActiveOrdersListPresenter: ActiveOrdersListPresenterProtocol {
     func handleAppearingView() {
         fetchActiveOrdersModels()
     }
+
+    func getActiveOrderAt(index: Int) -> ActiveOrdersViewModel? {
+        activeOrdersDataSource.activeOrversViewModels[index]
+    }
+
+    func getActiveOrdersCount() -> Int? {
+        activeOrdersDataSource.activeOrversViewModels.count
+    }
 }

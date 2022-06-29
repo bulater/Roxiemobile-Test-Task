@@ -9,4 +9,6 @@ import Foundation
 
 protocol ActiveOrdersListPresenterProtocol {
     func handleAppearingView()
+    func getActiveOrderAt(index: Int) -> ActiveOrdersViewModel?
+    func getActiveOrdersCount() -> Int?
 }
