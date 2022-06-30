@@ -30,9 +30,8 @@ class ActiveOrdersListPresenter {
         NetworkManager.shared.fetchActiveOrdersData(of: [ActiveOrders].self) { result in
             switch result {
             case .success(let data):
-//                let viewModels = data.map { ActiveOrdersViewModel(order: $0) }
-
-                self.activeOrdersDataSource.activeOrversViewModels = ActiveOrdersMapper.getSortedActiveOrdersViewModelsFrom(orders: data)
+                let sortedViewModels =  ActiveOrdersMapper.getSortedActiveOrdersViewModelsFrom(orders: data)
+                self.activeOrdersDataSource.activeOrversViewModels = sortedViewModels
 
                 DispatchQueue.main.async {
                     self.view?.reloadActiveOrdersTableView()
