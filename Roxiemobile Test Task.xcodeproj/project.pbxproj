@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E41C324286DADE30063B06A /* ActiveOrdersMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E41C323286DADE30063B06A /* ActiveOrdersMapper.swift */; };
 		9E691124286B936800A4B6D2 /* ActiveOrdersListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E691123286B936800A4B6D2 /* ActiveOrdersListTableViewCell.swift */; };
 		9E691127286C115200A4B6D2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E691126286C115200A4B6D2 /* NetworkManager.swift */; };
 		9E69112A286C127F00A4B6D2 /* ActiveOrders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E691129286C127F00A4B6D2 /* ActiveOrders.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E41C323286DADE30063B06A /* ActiveOrdersMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveOrdersMapper.swift; sourceTree = "<group>"; };
 		9E691123286B936800A4B6D2 /* ActiveOrdersListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveOrdersListTableViewCell.swift; sourceTree = "<group>"; };
 		9E691126286C115200A4B6D2 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		9E691129286C127F00A4B6D2 /* ActiveOrders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveOrders.swift; sourceTree = "<group>"; };
@@ -83,6 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E41C322286DADD00063B06A /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				9E41C323286DADE30063B06A /* ActiveOrdersMapper.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
 		9E691125286C113600A4B6D2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +233,7 @@
 		9ECF70D6286B76B200B59DA3 /* ActiveOrdersList */ = {
 			isa = PBXGroup;
 			children = (
+				9E41C322286DADD00063B06A /* Mapper */,
 				9E691130286C16AB00A4B6D2 /* DataSource */,
 				9E69112B286C134500A4B6D2 /* Model */,
 				9ECF70D9286B771900B59DA3 /* ModuleBuilder */,
@@ -377,6 +388,7 @@
 				9E691127286C115200A4B6D2 /* NetworkManager.swift in Sources */,
 				9ECF70E2286B77F800B59DA3 /* ActiveOrdersListModuleBuilder.swift in Sources */,
 				9E69113D286C3DFB00A4B6D2 /* OrderDetailPresenter.swift in Sources */,
+				9E41C324286DADE30063B06A /* ActiveOrdersMapper.swift in Sources */,
 				9ECF70C0286B73A400B59DA3 /* AppDelegate.swift in Sources */,
 				9E69112F286C16A700A4B6D2 /* ActiveOrdersDataSource.swift in Sources */,
 				9ED95F17286C6C21008F1F65 /* OrderDetailTableView.swift in Sources */,
